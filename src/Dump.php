@@ -1,6 +1,6 @@
 <?php
 
-namespace Pverhaert;
+namespace Pverhaert\Dump;
 
 class Dump
 {
