@@ -17,7 +17,8 @@
     ],
     "require": {
         "php": "^7.4 || ^8",
-        "illuminate/support": "^8 || ^9"
+        "illuminate/support": "^8 || ^9",
+        "ext-json": "*"
     },
     "require-dev": {
         "orchestra/testbench": "^6 || ^7",
