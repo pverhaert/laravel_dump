@@ -1,0 +1,54 @@
+{
+    "name": "pverhaert/dump",
+    "description": "Dump variable as JSON or dd()",
+    "keywords": [
+        "pverhaert",
+        "dump"
+    ],
+    "homepage": "https://github.com/pverhaert/dump",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Patrick Verhaert",
+            "email": "patrick.verhaert@thomasmore.be",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pverhaert\\Dump\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pverhaert\\Dump\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pverhaert\\Dump\\DumpServiceProvider"
+            ],
+            "aliases": {
+                "Dump": "Pverhaert\\Dump\\DumpFacade"
+            }
+        }
+    }
+}
